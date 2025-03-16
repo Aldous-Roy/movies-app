@@ -2,15 +2,17 @@
   "name": "rn-movie-app",
   "main": "expo-router/entry",
   "version": "1.0.0",
-  "scripts": {
-    "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "test": "jest --watchAll",
-    "lint": "expo lint"
-  },
+ "scripts": {
+  "start": "expo start",
+  "reset-project": "rm -rf node_modules && npm install && expo start",
+  "android": "expo start --android",
+  "ios": "expo start --ios",
+  "web": "expo start --web",
+  "test": "jest --watchAll",
+  "lint": "expo lint",
+  "clean": "expo r -c",
+  "eas-build": "eas build"
+},
   "jest": {
     "preset": "jest-expo"
   },
@@ -45,7 +47,8 @@
     "react-native-url-polyfill": "^2.0.0",
     "react-native-web": "~0.19.13",
     "react-native-webview": "13.12.5",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "expo-dev-client": "~5.0.14"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
